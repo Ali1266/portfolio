@@ -1,0 +1,6 @@
+@media screen and (max-width: 485px) {
+    .block-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+}
