@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="style/media.css">
     <title>Портфолио</title>
 </head>
-<body>
+<body id="body">
 
     <header class="container">
-        <img src="image/moon.svg" alt="" class="moon">
+        <img id="moon" src="image/moon.svg" alt="" class="moon">
+        <img id="sun" src="image/sun.svg" alt="" class="sun">
     </header>
     
     <main>
@@ -25,11 +26,11 @@
                 <a href="https://vk.com/ali1266" target="_blank"><img src="image/vk.svg" alt="" class="vk"></a>
             </div>
             <div class="block-buttons">
-                <div class="button_portfolio">Портфолио</div>
-                <div class="button_skills">Навыки</div>
+                <div class="button_portfolio active" id="btnPortfolio">Портфолио</div>
+                <div class="button_skills" id="btnSkills">Навыки</div>
             </div>
         </div>
-        <div class="portfolio-cards container">
+        <div id="portfolio" class="portfolio-cards container">
             <div class="portfolio-card">
                 <img src="image/Screenshot_2.png" alt="">
                 <div class="portfolio-card-before">
@@ -85,11 +86,40 @@
                 </div>
             </div>
         </div>
+
+        <div id="skills" class="skills-block container">
+            <p class="skills__direction">Frontend – разработчик</p>
+            <div class="skills">
+                <div class="skill">
+                    <img class="skill__img" src="image/mark.svg" alt="">
+                    <div class="skill__title-level">
+                        <span class="skill__title">HTML</span>
+                        <span class="skill__level">Выше среднего</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img class="skill__img" src="image/mark.svg" alt="">
+                    <div class="skill__title-level">
+                        <span class="skill__title">CSS</span>
+                        <span class="skill__level">Выше среднего</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img class="skill__img" src="image/cancel.svg" alt="">
+                    <div class="skill__title-level">
+                        <span class="skill__title">JavaScript</span>
+                        <span class="skill__level">Низкий</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
         <a href="https://vk.com/ali1266" target="_blank" class="name-footer">© Шахмалиев Али</a>
     </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>

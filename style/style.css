@@ -4,9 +4,14 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.moon {
+.moon,
+.sun {
     cursor: pointer;
     margin: 20px 0 20px 0;
+}
+
+.sun {
+    display: none;
 }
 
 .container {
@@ -70,9 +75,10 @@ body {
     height: 60px;
     cursor: pointer;
     border-radius: 10px;
+    transition: ease-in-out .3s;
 }
 
-.button_portfolio {
+.active {
     background-color: #fff;
 }
 
@@ -152,4 +158,44 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #3c4daf;
-  }
+}
+
+.skills-block {
+    display: none;
+}
+
+.skills__direction {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 40px;
+}
+
+.skill {
+    display: flex;
+    align-items: start;
+}
+
+.skill__title-level {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px
+}
+
+.skill__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.skill__level {
+    color: #979797;
+    font-weight: 500;
+}
