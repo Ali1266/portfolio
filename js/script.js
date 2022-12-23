@@ -14,9 +14,3 @@ btnPortfolio.onclick = function() {
     document.getElementById('btnSkills').classList.remove('active');
     document.getElementById('btnPortfolio').classList.add('active');
 }
-
-document.body.onclick = function() {
-    document.body.style.background = '#262a41';
-    document.getElementById('moon').style.display = 'none';
-    document.getElementById('sun').style.display = 'block';
-}
