@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<svg width="160" height="160" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+ <defs>
+  <symbol id="svg_1" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+   <!--! Font Awesome Free 6.0.0-beta2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+   <path d="m192,384c-8.188,0 -16.38,-3.125 -22.62,-9.375l-160,-160c-12.5,-12.5 -12.5,-32.75 0,-45.25s32.75,-12.5 45.25,0l137.37,137.425l137.4,-137.4c12.5,-12.5 32.75,-12.5 45.25,0s12.5,32.75 0,45.25l-160,160c-6.25,6.25 -14.45,9.35 -22.65,9.35z"/>
+  </symbol>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <use fill="#b3a577" id="svg_2" transform="matrix(0.416667 0 0 0.416667 0 0)" x="0" xlink:href="#svg_1" y="0"/>
+  <g id="svg_3"/>
+ </g>
+</svg>
