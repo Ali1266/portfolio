@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         });
     }
 
-    function displayBlock(i=0){
+    function displayBlock(i=1){
         blocks[i].style.display = 'block';
         menuBtns[i].classList.add('active');
     }

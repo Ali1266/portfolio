@@ -179,6 +179,12 @@ a{
     color: var(--color-hover);
 }
 
+.home__contacts{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
 .portfolio{
     padding-top: 80px;
 }
