@@ -17,18 +17,25 @@
     <div class="top-line"></div>
     <div class="bottom-line"></div>
     <div class="left-line"></div>
-    <div class="right-line"></div>
 
-    <header class="header">
+    <header class="header" id="header">
         <div class="container-header">
             <div class="header__inner">
                 <div class="logo">
                     <span><\AS></span>
                 </div>
-                <div class="menu">
-                    <div class="menu__btns">
-                        <button class="menu__btn">Главная</button>
-                        <button class="menu__btn">Портфолио</button>
+                <div class="header__menu-burger">
+                    <div class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="#header" class="menu__link">Главная</a></li>
+                            <li class="menu__item"><a href="#portfolio" class="menu__link">Портфолио</a></li>
+                        </ul>
+                    </div>
+                    <div class="burger">
+                        <div class="burger__spans">
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -36,55 +43,53 @@
     </header>
 
     <main>
-        <div class="blocks">
-            <div class="home block">
-                <div class="container">
-                    <div class="home__inner">
-                        <div class="home__photo">
-                            <img src="image/my-photo.jpg" alt="">
-                        </div>
-                        <p class="home__name"><span>Шахмалиев</span> Али</p>
-                        <p class="home__text">Web - <span>разработчик</span></p>
-                        <div class="home__contacts">
-                            <a href="https://vk.com/ali1266" target="_blank" class="home__contacts-img">
-                                <img src="image/vk.svg" alt="">
-                            </a>
-                            <a href="https://t.me/hunter1266" target="_blank" class="home__contacts-img">
-                                <img src="image/telegram.svg" alt="">
-                            </a>
-                        </div>
+        <div class="home block" id="home">
+            <div class="container">
+                <div class="home__inner">
+                    <div class="home__photo">
+                        <img src="image/my-photo.jpg" alt="">
+                    </div>
+                    <p class="home__name"><span>Шахмалиев</span> Али</p>
+                    <p class="home__text">Web - <span>разработчик</span></p>
+                    <div class="home__contacts">
+                        <a href="https://vk.com/ali1266" target="_blank" class="home__contacts-img">
+                            <img src="image/vk.svg" alt="">
+                        </a>
+                        <a href="https://t.me/hunter1266" target="_blank" class="home__contacts-img">
+                            <img src="image/telegram.svg" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="portfolio block">
-                <div class="container">
-                    <div class="portfolio__inner slick-slider">
-                        <a href="https://ali1266.github.io/website_1/" target="_blank" class="portfolio__card">
-                            <img src="image/1.jpg" alt="">
-                        </a>
-                        <a href="https://ali1266.github.io/website_10/" target="_blank" class="portfolio__card">
-                            <img src="image/2.jpg" alt="">
-                        </a>
-                        <a href="https://ali1266.github.io/website_9/" target="_blank" class="portfolio__card">
-                            <img src="image/3.jpg" alt="">
-                        </a>
-                        <a href="https://ali1266.github.io/website_8/" target="_blank" class="portfolio__card">
-                            <img src="image/4.jpg" alt="">
-                        </a>
-                        <a href="https://ali1266.github.io/website_7/" target="_blank" class="portfolio__card">
-                            <img src="image/5.jpg" alt="">
-                        </a>
-                        <a href="https://ali1266.github.io/website_11/" target="_blank" class="portfolio__card">
-                            <img src="image/6.jpg" alt="">
-                        </a>
-                        <a href="https://ali1266.github.io/website_2/" target="_blank" class="portfolio__card">
-                            <img src="image/7.jpg" alt="">
-                        </a>
-                        <a href="https://ali1266.github.io/website_3/" target="_blank" class="portfolio__card">
-                            <img src="image/8.jpg" alt="">
-                        </a>
-                    </div>
+        <div class="portfolio block" id="portfolio">
+            <div class="container">
+                <div class="portfolio__inner slick-slider">
+                    <a href="https://ali1266.github.io/website_1/" target="_blank" class="portfolio__card">
+                        <img src="image/1.jpg" alt="">
+                    </a>
+                    <a href="https://ali1266.github.io/website_10/" target="_blank" class="portfolio__card">
+                        <img src="image/2.jpg" alt="">
+                    </a>
+                    <a href="https://ali1266.github.io/website_9/" target="_blank" class="portfolio__card">
+                        <img src="image/3.jpg" alt="">
+                    </a>
+                    <a href="https://ali1266.github.io/website_8/" target="_blank" class="portfolio__card">
+                        <img src="image/4.jpg" alt="">
+                    </a>
+                    <a href="https://ali1266.github.io/website_7/" target="_blank" class="portfolio__card">
+                        <img src="image/5.jpg" alt="">
+                    </a>
+                    <a href="https://ali1266.github.io/website_11/" target="_blank" class="portfolio__card">
+                        <img src="image/6.jpg" alt="">
+                    </a>
+                    <a href="https://ali1266.github.io/website_2/" target="_blank" class="portfolio__card">
+                        <img src="image/7.jpg" alt="">
+                    </a>
+                    <a href="https://ali1266.github.io/website_3/" target="_blank" class="portfolio__card">
+                        <img src="image/8.jpg" alt="">
+                    </a>
                 </div>
             </div>
         </div>

@@ -4,6 +4,22 @@
     --color-hover: #b3a577;
 }
 
+body::-webkit-scrollbar {
+    width: 20px;               /* ширина всей полосы прокрутки */
+  }
+  
+body::-webkit-scrollbar-track {
+    background: var(--color);        /* цвет зоны отслеживания */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--background-color);    /* цвет бегунка */
+    border-radius: 20px;       /* округлось бегунка */
+    border: 9px solid var(--color);      /* отступ вокруг бегунка */
+    border-top: 20px solid var(--color);
+    border-bottom: 20px solid var(--color);
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
@@ -27,35 +43,30 @@ a{
 }
 
 .top-line{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 20px;
     background-color: var(--color);
     top: 0;
+    z-index: 999;
 }
 
 .bottom-line{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 20px;
     background-color: var(--color);
     bottom: 0;
+    z-index: 999;
 }
 
 .left-line{
-    position: absolute;
+    position: fixed;
     width: 20px;
     height: 100%;
     background-color: var(--color);
     left: 0;
-}
-
-.right-line{
-    position: absolute;
-    width: 20px;
-    height: 100%;
-    background-color: var(--color);
-    right: 0;
+    z-index: 999;
 }
 
 .header{
@@ -63,9 +74,11 @@ a{
 }
 
 .header__inner{
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1700px;
 }
 
 .logo{
@@ -78,17 +91,29 @@ a{
     color: var(--color-hover);
 }
 
-.menu{
+.header__menu-burger{
     display: flex;
+    align-items: center;
+}
+
+.menu{
+    overflow: hidden;
 }
 
 .menu__list{
+    visibility: hidden;
     display: flex;
     align-items: center;
     transition: all .3s;
+    transform: translateX(100%);
 }
 
-.menu__btn{
+.menu .menu__list-active{
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.menu__link{
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
@@ -96,7 +121,7 @@ a{
     padding: 20px 15px;
 }
 
-.menu__btn:hover {
+.menu__link:hover {
     color: var(--color-hover);
 }
 
@@ -105,36 +130,40 @@ a{
 }
 
 .burger{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80px;
-    height: 80px;
+    padding: 34px 25px;
     cursor: pointer;
 }
 
-.burger-line{
-    position: absolute;
+.burger:hover span{
+    background-color: var(--color-hover);
+}
+
+.burger-line-first{
+    transform: translate(6px, -5px) rotate(45deg);
+    transform-origin: left top;
+    background-color: var(--color-hover)!important;
+}
+
+.burger-line-last{
+    transform: translate(-3px, -16px) rotate(-45deg); 
+    transform-origin: right bottom;
+    background-color: var(--color-hover)!important;
+}
+
+.burger__spans{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 12px;
+}
+
+.burger span{
     display: block;
     width: 30px;
     height: 2px;
     background-color: var(--color);
     transition: all .3s;
-    top: 45%;
-    transform: translateY(-50%);
-}
-
-.burger__span-active{
-    background-color: var(--color-hover);
-}
-
-.burger:hover .burger-line{
-    background-color: var(--color-hover);
-}
-
-.burger-line:last-of-type{
-    margin-top: 10px;
 }
 
 .home__inner{
@@ -144,7 +173,7 @@ a{
 }
 
 .home__photo{
-    margin-top: 80px;
+    margin-top: 160px;
     margin-bottom: 30px;
     width: 400px;
     height: 400px;
@@ -186,7 +215,7 @@ a{
 }
 
 .portfolio{
-    padding-top: 80px;
+    padding: 120px 0;
 }
 
 .portfolio__inner{
