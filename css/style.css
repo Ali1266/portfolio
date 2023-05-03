@@ -37,7 +37,7 @@ a{
 }
 
 .container-header{
-    max-width: 1700px;
+    max-width: 1670px;
     padding: 0 10px;
     margin: 0 auto;
 }
@@ -78,7 +78,8 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1700px;
+    width: 100%;
+    max-width: inherit;
 }
 
 .logo{
@@ -101,7 +102,6 @@ a{
 }
 
 .menu__list{
-    visibility: hidden;
     display: flex;
     align-items: center;
     transition: all .3s;

@@ -32,8 +32,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
     const menu = document.querySelector('.menu'),
-          menuBtns = document.querySelectorAll('.menu__link'),
-          blocks = document.querySelectorAll('.block');
+          menuBtns = document.querySelectorAll('.menu__link');
     
     function displayNone(){
         menuBtns.forEach(item=>{
