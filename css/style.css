@@ -292,7 +292,7 @@ a{
 }
 
 .tools__items{
-    max-width: 828px;
+    max-width: calc(207px * 4);
 }
 
 .tools__items img{
