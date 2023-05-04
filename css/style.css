@@ -82,13 +82,16 @@ a{
     max-width: inherit;
 }
 
-.logo{
-    cursor: pointer;
-}
-
 .logo span{
     font-size: 36px;
     font-weight: bold;
+    color: var(--color);
+    cursor: pointer;
+    padding: 20px;
+    transition: all .3s;
+}
+
+.logo span:hover{
     color: var(--color-hover);
 }
 
@@ -215,7 +218,14 @@ a{
 }
 
 .portfolio{
-    padding: 120px 0;
+    padding-top: 200px;
+}
+
+.title{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--color);
 }
 
 .portfolio__inner{
@@ -239,7 +249,7 @@ a{
     font-size: 0;
 }
 
-.slick-next{
+.portfolio__inner .slick-next{
     position: absolute;
     right: -50px;
     top: 45%;
@@ -251,7 +261,7 @@ a{
     height: 50px;
 }
 
-.slick-prev{
+.portfolio__inner .slick-prev{
     position: absolute;
     left: -50px;
     top: 45%;
@@ -261,4 +271,45 @@ a{
     background-repeat: no-repeat;
     width: 58px;
     height: 50px;
+}
+
+.tools{
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+.tools__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tools__title{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--color);
+}
+
+.tools__items{
+    max-width: 828px;
+}
+
+.tools__items img{
+    max-width: 207px;
+    filter: grayscale(1);
+    transition: all .8s;
+}
+
+.tools__items img:hover{
+    filter: grayscale(0);
+}
+
+.footer{
+    padding-bottom: 50px;
+    margin: 0 a;
+}
+
+.footer__text{
+    text-align: center;
 }

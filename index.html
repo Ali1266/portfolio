@@ -29,6 +29,7 @@
                         <ul class="menu__list">
                             <li class="menu__item"><a href="#header" class="menu__link">Главная</a></li>
                             <li class="menu__item"><a href="#portfolio" class="menu__link">Портфолио</a></li>
+                            <li class="menu__item"><a href="#tools" class="menu__link">Инструменты</a></li>
                         </ul>
                     </div>
                     <div class="burger">
@@ -43,14 +44,14 @@
     </header>
 
     <main>
-        <div class="home block" id="home">
+        <section class="home block" id="home">
             <div class="container">
                 <div class="home__inner">
                     <div class="home__photo">
                         <img src="image/my-photo.jpg" alt="">
                     </div>
-                    <p class="home__name"><span>Шахмалиев</span> Али</p>
-                    <p class="home__text">Web - <span>разработчик</span></p>
+                    <h1 class="home__name"><span>Шахмалиев</span> Али</h1>
+                    <h1 class="home__text">Web - <span>разработчик</span></h1>
                     <div class="home__contacts">
                         <a href="https://vk.com/ali1266" target="_blank" class="home__contacts-img">
                             <img src="image/vk.svg" alt="">
@@ -61,11 +62,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="portfolio block" id="portfolio">
+        <section class="portfolio block" id="portfolio">
             <div class="container">
-                <div class="portfolio__inner slick-slider">
+                <h2 class="portfolio__title title">Портфолио</h2>
+                <div class="portfolio__inner">
                     <a href="https://ali1266.github.io/website_1/" target="_blank" class="portfolio__card">
                         <img src="image/1.jpg" alt="">
                     </a>
@@ -92,9 +94,31 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="tools" id="tools">
+            <div class="container">
+                <div class="tools__inner">
+                    <h2 class="tools__title">Инструменты, которые я использую</h2>
+                    <div class="tools__items">
+                        <img src="image/html.png" alt="">
+                        <img src="image/css.png" alt="">
+                        <img src="image/js.png" alt="">
+                        <img src="image/figma.png" alt="">
+                        <img src="image/vscode.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">
+                © Portfolio <span class="year"></span> | Shakhmaliev Ali
+            </p>
+        </div>
+    </footer>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>

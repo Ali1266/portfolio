@@ -1,9 +1,16 @@
 $(function slider(){
-    $('.slick-slider').slick({
+    $('.portfolio__inner').slick({
         dots: true,
         fade: true,
         autoplay: true,
         autoplayspeed: 2000
+    });
+
+    $('.tools__items').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
     });
 
     $(".menu").on("click","a", function (event) {
@@ -59,4 +66,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             }
         });
     });
+
+    const year = document.querySelector('.year');
+    year.innerHTML = new Date().getFullYear();
 });
