@@ -13,7 +13,7 @@ $(function slider(){
         autoplaySpeed: 2000,
     });
 
-    $(".menu").on("click","a", function (event) {
+    $(".menu, .logo").on("click","a", function (event) {
 		event.preventDefault();
 		var id  = $(this).attr('href'),
 			top = $(id).offset().top;

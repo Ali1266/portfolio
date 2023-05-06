@@ -83,7 +83,7 @@ a{
     z-index: 999;
 }
 
-.logo span{
+.logo{
     font-size: 36px;
     font-weight: bold;
     color: var(--color);
@@ -92,7 +92,7 @@ a{
     transition: all .3s;
 }
 
-.logo span:hover{
+.logo:hover{
     color: var(--color-hover);
 }
 
