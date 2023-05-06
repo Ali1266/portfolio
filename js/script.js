@@ -67,6 +67,26 @@ document.addEventListener('DOMContentLoaded', ()=>{
         });
     });
 
+    const observer = new IntersectionObserver((entries) => {
+        console.log(entries);
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            document.querySelectorAll('.menu__link').forEach((link) => {
+              let id = link.getAttribute('href').replace('#', '');
+              if (id === entry.target.id) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, {
+        threshold: 0.9
+      });
+      
+      document.querySelectorAll('section').forEach(section => { observer.observe(section)} );
+
     const year = document.querySelector('.year');
     year.innerHTML = new Date().getFullYear();
 });
