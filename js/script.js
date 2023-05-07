@@ -1,17 +1,24 @@
 $(function slider(){
-    $('.portfolio__inner').slick({
-        dots: true,
-        fade: true,
-        autoplay: true,
-        autoplayspeed: 2000
-    });
-
-    $('.tools__items').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-    });
+  $('.tools__items').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+        {
+            breakpoint: 622,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+          breakpoint: 415,
+            settings: {
+                slidesToShow: 2,
+            }
+        }
+    ]
+});
 
     $(".menu, .logo").on("click","a", function (event) {
 		event.preventDefault();
@@ -82,7 +89,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
           }
         });
       }, {
-        threshold: 0.9
+        threshold: 0.5
       });
       
       document.querySelectorAll('section').forEach(section => { observer.observe(section)} );

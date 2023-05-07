@@ -36,12 +36,6 @@ a{
     margin: 0 auto;
 }
 
-.container-header{
-    max-width: 1670px;
-    padding: 0 10px;
-    margin: 0 auto;
-}
-
 .top-line{
     position: fixed;
     width: 100%;
@@ -69,27 +63,24 @@ a{
     z-index: 999;
 }
 
-.header{
-    padding-top: 80px;
-}
-
 .header__inner{
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: inherit;
     z-index: 999;
+    width: 100%;
+    padding: 4% 4% 0 4%;
 }
 
 .logo{
     font-size: 36px;
     font-weight: bold;
-    color: var(--color);
+    color: #dddddd;
     cursor: pointer;
-    padding: 20px;
+    padding: 25px;
     transition: all .3s;
+    white-space: nowrap;
 }
 
 .logo:hover{
@@ -123,6 +114,7 @@ a{
     font-weight: bold;
     transition: all .3s;
     padding: 20px 15px;
+    display: block;
 }
 
 .menu__link:hover {
@@ -134,8 +126,11 @@ a{
 }
 
 .burger{
+    position: relative;
     padding: 34px 25px;
     cursor: pointer;
+    margin-right: 7px;
+    z-index: 999;
 }
 
 .burger:hover span{
@@ -177,7 +172,7 @@ a{
 }
 
 .home__photo{
-    margin-top: 160px;
+    margin-top: 260px;
     margin-bottom: 30px;
     width: 400px;
     height: 400px;
@@ -197,14 +192,10 @@ a{
     transform: scale(1.1);
 }
 
-.home__name{
-    font-size: 48px;
-    font-weight: bold;
-}
-
+.home__name,
 .home__text{
-    font-size: 48px;
     font-weight: bold;
+    font-size: 48px;
 }
 
 .home__text span,
@@ -223,23 +214,35 @@ a{
 }
 
 .title{
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 700;
     margin-bottom: 30px;
     color: var(--color);
 }
 
 .portfolio__inner{
-    display: flex;
-    flex-wrap: wrap;
-    border: solid 3px var(--color-hover);
-    border-radius: 40px;
-    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 20px;
 }
 
 .portfolio__card{
-    border-radius: 30px;
+    position: relative;
+    border-radius: 3px;
     overflow: hidden;
+}
+
+.portfolio__card:hover .portfolio__card::before{
+    width: 90%;
+}
+
+.portfolio__card img{
+    transition: transform 3s;
+}
+
+.portfolio__card:hover img{
+    transform: scale(1.2) rotate(5deg);
+    filter: blur(1px);
 }
 
 .slick-dots{
@@ -248,30 +251,6 @@ a{
 
 .slick-arrow{
     font-size: 0;
-}
-
-.portfolio__inner .slick-next{
-    position: absolute;
-    right: -50px;
-    top: 45%;
-    transform: translateY(-50%);
-    transform: rotate(-90deg);
-    background: url(../image/arrow.svg);
-    background-repeat: no-repeat;
-    width: 58px;
-    height: 50px;
-}
-
-.portfolio__inner .slick-prev{
-    position: absolute;
-    left: -50px;
-    top: 45%;
-    transform: translateY(-50%);
-    transform: rotate(90deg);
-    background: url(../image/arrow.svg);
-    background-repeat: no-repeat;
-    width: 58px;
-    height: 50px;
 }
 
 .tools{
@@ -290,6 +269,7 @@ a{
     font-weight: 700;
     margin-bottom: 30px;
     color: var(--color);
+    text-align: center;
 }
 
 .tools__items{
@@ -313,4 +293,89 @@ a{
 
 .footer__text{
     text-align: center;
+}
+
+@media (max-width: 1120px){
+    .top-line,
+    .bottom-line,
+    .left-line{
+        display: none;
+    }
+    .header__inner{
+        padding: 0;
+    }
+    .footer{
+        padding-bottom: 20px;
+    }
+    .home__photo{
+        margin-top: 160px;
+    }
+    .portfolio,
+    .tools{
+        padding-top: 120px;
+    }
+}
+
+@media (max-width: 828px){
+    .tools__items{
+        max-width: calc(207px * 3);
+    }
+    .burger{
+        margin-left: 100px;
+    }
+    .menu__list{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        transition: all .2s;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--color);
+        color: var(--background-color);
+        align-items: flex-start;
+        top: 0;
+        padding-top: 100px;
+    }
+    .menu{
+        overflow: visible;
+    }
+    .menu__link{
+        padding-right: 100px;
+    }
+}
+
+@media (max-width: 621px){
+    .tools__items{
+        max-width: calc(207px * 2);
+    }
+    .home__photo img,
+    .home__photo{
+        width: 280px;
+        height: 280px;
+    }
+    .portfolio__inner{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .home__name, .home__text{
+        font-size: 33px;
+    }
+    .home__contacts-img{
+        width: 40px;
+    }
+    .title{
+        font-size: 30px;
+    }
+    .tools__title{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 414px){
+    .tools__items{
+        max-width: 300px;
+    }
+    .logo{
+        font-size: 32px;
+        padding: 15px;
+    }
 }
