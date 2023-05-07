@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
           }
         });
       }, {
-        threshold: 0.5
+        threshold: 0.3
       });
       
       document.querySelectorAll('section').forEach(section => { observer.observe(section)} );
